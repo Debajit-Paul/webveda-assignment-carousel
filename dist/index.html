@@ -10,12 +10,74 @@
     />
     <title>Document</title>
   </head>
+  <style>
+    .swiper-button-prev {
+      width: 60px;
+      height: 60px;
+      position: relative;
+      top: -28px;
+      left: -300px;
+      z-index: 10;
+    }
+    .swiper-button-next {
+      width: 60px;
+      height: 60px;
+      position: relative;
+      top: -25px;
+      left: -290px;
+      z-index: 10;
+    }
+    @media (min-width: 1000px) {
+      .swiper-button-prev {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        top: -28px;
+        left: -115px;
+        z-index: 10;
+      }
+      .swiper-button-next {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        top: -25px;
+        left: -105px;
+        z-index: 10;
+      }
+      @media (max-width: 640px) {
+        .swiper-button-prev {
+          width: 60px;
+          height: 60px;
+          position: relative;
+          top: -28px;
+          left: -115px;
+          z-index: 10;
+        }
+        .swiper-button-next {
+          width: 60px;
+          height: 60px;
+          position: relative;
+          top: -25px;
+          left: -290px;
+          z-index: 10;
+        }
+      }
+    }
+  </style>
   <body class="bg-[#ffca5d]">
     <div
-      class="flex flex-col md1:grid md1:grid-cols-2 justify-center items-center max-w-screen h-auto p-[50px] gap-[100px] md1:gap-[50px] overflow-x-hidden"
+      class="flex flex-col md1:grid md1:grid-cols-2 justify-center items-center max-w-screen h-auto max-sm:p-[35px] p-[50px] gap-[100px] md1:gap-[30px] overflow-x-hidden"
     >
-      <img src="./img/banner.png" alt="" class="w-[65%] md1:w-[90%]" />
-
+      <div class="flex flex-col gap-[15px] items-center md2:items-start">
+        <h1 class="text-[30px] sm:text-[40px] font-[600] text-[#583e87]">
+          From our students...
+        </h1>
+        <img
+          src="./img/banner.png"
+          alt=""
+          class="w-[90%] sm1:w-[65%] md1:w-[90%]"
+        />
+      </div>
       <!-- <div
         class="flex items-center justify-center w-[65%] md1:w-[100%] h-[500px]"
       >
@@ -48,16 +110,18 @@
       </div> -->
 
       <div
-        class="flex w-[100%] sm:ml-[40%] ml-[30%] md1:ml-0 justify-items-end"
+        class="flex w-[100%] max-sm:ml-[20%] ml-[17%] sm1:ml-[30%] md1:ml-0 justify-items-end"
       >
-        <div class="swiper carouselSwiper w-[80%]">
+        <div
+          class="swiper carouselSwiper w-[83%] sm2:w-[82%] md:w-[88%] md2:w-[80%]"
+        >
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div
-                class="flex items-center justify-center w-[65%] md1:w-[100%] h-[500px] md1:h-[480px] md2:h-[500px]"
+                class="flex items-center justify-center max-sm:w-[90%] sm1:w-[70%] md1:w-[100%] max-sm:h-[425px] h-[480px] sm2:h-[500px] md1:h-[480px] md2:h-[500px]"
               >
                 <div
-                  class="w-[100%] h-[95%] bg-white rounded-[25px] drop-shadow-[0_4px_5px_rgba(0,0,0,0.5)] p-[25px] object-contain"
+                  class="w-[95%] h-[95%] bg-white rounded-[25px] drop-shadow-[0_4px_5px_rgba(0,0,0,0.5)] p-[25px] object-contain"
                 >
                   <img
                     src="./img/single-quotes.svg"
@@ -68,7 +132,7 @@
                     class="flex flex-col justify-between absolute top-[30px] w-[100%] h-[85%]"
                   >
                     <p
-                      class="w-[75%] h-[90%] md1:text-[17px] md2:text-[18px] text-[#262626] object-contain"
+                      class="w-[74%] h-[90%] max-sm:text-[13px] sm:text-[17px] sm1:text-[17px] md1:text-[17px] md2:text-[18px] text-[#262626] object-contain"
                     >
                       It wasn't only about the language, vocabulary, fluency or
                       storytelling as people speak of it. Even though we've
@@ -89,10 +153,10 @@
             </div>
             <div class="swiper-slide">
               <div
-                class="flex items-center justify-center w-[65%] md1:w-[100%] h-[500px] md1:h-[480px] md2:h-[500px]"
+                class="flex items-center justify-center max-sm:w-[90%] sm1:w-[70%] md1:w-[100%] max-sm:h-[425px] h-[480px] sm2:h-[500px] md1:h-[480px] md2:h-[500px]"
               >
                 <div
-                  class="w-[100%] h-[95%] bg-white rounded-[25px] drop-shadow-[0_4px_5px_rgba(0,0,0,0.5)] p-[25px] object-contain"
+                  class="w-[95%] h-[95%] bg-white rounded-[25px] drop-shadow-[0_4px_5px_rgba(0,0,0,0.5)] p-[25px] object-contain"
                 >
                   <img
                     src="./img/single-quotes.svg"
@@ -103,7 +167,147 @@
                     class="flex flex-col justify-between absolute top-[30px] w-[100%] h-[85%]"
                   >
                     <p
-                      class="w-[75%] h-[90%] md1:text-[17px] md2:text-[18px] text-[#262626] object-contain"
+                      class="w-[74%] h-[90%] max-sm:text-[13px] sm:text-[17px] sm1:text-[17px] md1:text-[17px] md2:text-[18px] text-[#262626] object-contain"
+                    >
+                      It wasn't only about the language, vocabulary, fluency or
+                      storytelling as people speak of it. Even though we've
+                      heard of how important it is to be a good story teller,
+                      the part in this course on story telling and communication
+                      was more about how to tell our story in alignment with
+                      knowing audience. Because it is going to decide which
+                      story, tone and the feel of it.
+                    </p>
+                    <p
+                      class="font-[700] text-[18px] text-[#262626] italic underline"
+                    >
+                      PARTHA DATTA
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="flex items-center justify-center max-sm:w-[90%] sm1:w-[70%] md1:w-[100%] max-sm:h-[425px] h-[480px] sm2:h-[500px] md1:h-[480px] md2:h-[500px]"
+              >
+                <div
+                  class="w-[95%] h-[95%] bg-white rounded-[25px] drop-shadow-[0_4px_5px_rgba(0,0,0,0.5)] p-[25px] object-contain"
+                >
+                  <img
+                    src="./img/single-quotes.svg"
+                    alt=""
+                    class="w-[35%] h-[35%] absolute top-[-25px] left-[calc(70%)]"
+                  />
+                  <div
+                    class="flex flex-col justify-between absolute top-[30px] w-[100%] h-[85%]"
+                  >
+                    <p
+                      class="w-[74%] h-[90%] max-sm:text-[13px] sm:text-[17px] sm1:text-[17px] md1:text-[17px] md2:text-[18px] text-[#262626] object-contain"
+                    >
+                      It wasn't only about the language, vocabulary, fluency or
+                      storytelling as people speak of it. Even though we've
+                      heard of how important it is to be a good story teller,
+                      the part in this course on story telling and communication
+                      was more about how to tell our story in alignment with
+                      knowing audience. Because it is going to decide which
+                      story, tone and the feel of it.
+                    </p>
+                    <p
+                      class="font-[700] text-[18px] text-[#262626] italic underline"
+                    >
+                      PARTHA DATTA
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="flex items-center justify-center max-sm:w-[90%] sm1:w-[70%] md1:w-[100%] max-sm:h-[425px] h-[480px] sm2:h-[500px] md1:h-[480px] md2:h-[500px]"
+              >
+                <div
+                  class="w-[95%] h-[95%] bg-white rounded-[25px] drop-shadow-[0_4px_5px_rgba(0,0,0,0.5)] p-[25px] object-contain"
+                >
+                  <img
+                    src="./img/single-quotes.svg"
+                    alt=""
+                    class="w-[35%] h-[35%] absolute top-[-25px] left-[calc(70%)]"
+                  />
+                  <div
+                    class="flex flex-col justify-between absolute top-[30px] w-[100%] h-[85%]"
+                  >
+                    <p
+                      class="w-[74%] h-[90%] max-sm:text-[13px] sm:text-[17px] sm1:text-[17px] md1:text-[17px] md2:text-[18px] text-[#262626] object-contain"
+                    >
+                      It wasn't only about the language, vocabulary, fluency or
+                      storytelling as people speak of it. Even though we've
+                      heard of how important it is to be a good story teller,
+                      the part in this course on story telling and communication
+                      was more about how to tell our story in alignment with
+                      knowing audience. Because it is going to decide which
+                      story, tone and the feel of it.
+                    </p>
+                    <p
+                      class="font-[700] text-[18px] text-[#262626] italic underline"
+                    >
+                      PARTHA DATTA
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="flex items-center justify-center max-sm:w-[90%] sm1:w-[70%] md1:w-[100%] max-sm:h-[425px] h-[480px] sm2:h-[500px] md1:h-[480px] md2:h-[500px]"
+              >
+                <div
+                  class="w-[95%] h-[95%] bg-white rounded-[25px] drop-shadow-[0_4px_5px_rgba(0,0,0,0.5)] p-[25px] object-contain"
+                >
+                  <img
+                    src="./img/single-quotes.svg"
+                    alt=""
+                    class="w-[35%] h-[35%] absolute top-[-25px] left-[calc(70%)]"
+                  />
+                  <div
+                    class="flex flex-col justify-between absolute top-[30px] w-[100%] h-[85%]"
+                  >
+                    <p
+                      class="w-[74%] h-[90%] max-sm:text-[13px] sm:text-[17px] sm1:text-[17px] md1:text-[17px] md2:text-[18px] text-[#262626] object-contain"
+                    >
+                      It wasn't only about the language, vocabulary, fluency or
+                      storytelling as people speak of it. Even though we've
+                      heard of how important it is to be a good story teller,
+                      the part in this course on story telling and communication
+                      was more about how to tell our story in alignment with
+                      knowing audience. Because it is going to decide which
+                      story, tone and the feel of it.
+                    </p>
+                    <p
+                      class="font-[700] text-[18px] text-[#262626] italic underline"
+                    >
+                      PARTHA DATTA
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div
+                class="flex items-center justify-center max-sm:w-[90%] sm1:w-[70%] md1:w-[100%] max-sm:h-[425px] h-[480px] sm2:h-[500px] md1:h-[480px] md2:h-[500px]"
+              >
+                <div
+                  class="w-[95%] h-[95%] bg-white rounded-[25px] drop-shadow-[0_4px_5px_rgba(0,0,0,0.5)] p-[25px] object-contain"
+                >
+                  <img
+                    src="./img/single-quotes.svg"
+                    alt=""
+                    class="w-[35%] h-[35%] absolute top-[-25px] left-[calc(70%)]"
+                  />
+                  <div
+                    class="flex flex-col justify-between absolute top-[30px] w-[100%] h-[85%]"
+                  >
+                    <p
+                      class="w-[74%] h-[90%] max-sm:text-[13px] sm:text-[17px] sm1:text-[17px] md1:text-[17px] md2:text-[18px] text-[#262626] object-contain"
                     >
                       It wasn't only about the language, vocabulary, fluency or
                       storytelling as people speak of it. Even though we've
@@ -127,30 +331,10 @@
         <img
           src="./img/arrow.svg"
           alt=""
-          style="
-            width: 60px;
-            height: 60px;
-            position: relative;
-            top: -28px;
-            left: -115px;
-            z-index: 10;
-          "
           class="swiper-button-prev rotate-180"
         />
 
-        <img
-          src="./img/arrow.svg"
-          alt=""
-          style="
-            width: 60px;
-            height: 60px;
-            position: relative;
-            top: -25px;
-            left: -105px;
-            z-index: 10;
-          "
-          class="swiper-button-next"
-        />
+        <img src="./img/arrow.svg" alt="" class="swiper-button-next" />
       </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
